@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 100px;
+        }
+
+        #noBtn {
+            position: absolute;
+            margin-left: 20px;
+        }
+
+        #message {
+            display: none;
+            font-size: 20px;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Add your question here -->
+    <h2>Your question here?</h2>
+
+    <button onclick="showMessage()">Yes</button>
+    <button id="noBtn" onmouseover="moveNo()">No</button>
+
+    <!-- Text after clicking Yes -->
+    <div id="message">thanks</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("message").style.display = "block";
+    }
+
+    function moveNo() {
+        var btn = document.getElementById("noBtn");
+
+        var x = Math.random() * (window.innerWidth - 100);
+        var y = Math.random() * (window.innerHeight - 100);
+
+        btn.style.left = x + "px";
+        btn.style.top = y + "px";
+    }
+</script>
+
+</body>
+</html>
